@@ -9,23 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var count = 0
-    func increaseCount() {
+    private var count = 0
+    
+    @IBOutlet weak private var buttonCount: UIButton!
+    @IBOutlet weak private var countLabel: UILabel!
+    
+    private func increaseCount() {
         count += 1
-        labelCount.text = "Значение счетчика: \(count)"
+        countLabel.text = "Значение счетчика: \(count)"
         
     }
     
-    @IBOutlet weak var buttonCount: UIButton!
-    @IBOutlet weak var labelCount: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelCount.text = "Значение счетчика: 0"
-        // Do any additional setup after loading the view.
+        countLabel.text = "Значение счетчика: 0"
     }
     
-    @IBAction func buttonUp(_ sender: UIButton) {
+    @IBAction private func didTapIncreaseButton(_ sender: UIButton) {
         increaseCount()
     }
 }

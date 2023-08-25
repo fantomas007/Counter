@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     private var count = 0
     
     @IBOutlet weak private var buttonCount: UIButton!
@@ -30,5 +29,3 @@ class ViewController: UIViewController {
         increaseCount()
     }
 }
-
-
